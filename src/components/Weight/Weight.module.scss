@@ -1,0 +1,32 @@
+@import "../../sass/_variables";
+
+.wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  background: $blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  z-index: 100;
+
+  .weight {
+    color: #FFFFFF;
+    font-size: 42px;
+    font-family: "Exo 2.0", "Arial", sans-serif;
+
+  }
+
+  .unit {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-family: "Exo 2.0", "Arial", sans-serif;
+  }
+}
+
+
+

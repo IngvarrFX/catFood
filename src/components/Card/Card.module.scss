@@ -1,0 +1,19 @@
+@import "../../sass/_variables";
+
+.wrapper {
+  width: 320px;
+  height: 480px;
+  border: 4px $blue solid;
+  border-radius: 12px;
+  background: $white;
+  position: relative;
+  overflow: hidden;
+
+  & img {
+    display: block;
+    position: absolute;
+    bottom: -100px;
+    left: -30px;
+    width: 380px;
+  }
+}

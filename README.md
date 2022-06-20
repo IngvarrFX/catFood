@@ -66,23 +66,13 @@ Q7 Какие ресурсы вы используете для развития
     
     learn.javascript.ru
 
-    webdesign-master.ru
-
-    css-tricks.ru
-
     developer.mozilla.org
-
-    javascript.ru
 
     true-coder.ru
 
     proglib.io
 
     webref.ru
-
-    htmlacademy.ru/blog
-
-    htmlacademy.ru/blog/tags
 
 Какое направление развития вам более близко: JS-программирование, HTML/CSSверстка или и то, и другое?
 

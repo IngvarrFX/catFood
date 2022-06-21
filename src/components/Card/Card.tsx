@@ -26,12 +26,14 @@ export const Card = (props: CardPropsType) => {
 
     return (
         <div className={styles.wrapper}>
-            <span>{tagline}</span>
-            <Title >
-                <span>{title}</span>
-            </Title>
-            <Weight weight={weight} unitWeight={unitWeight}/>
-            <img src={image} alt=""/>
+            <div className={styles.cardBlock}>
+                <div>{tagline}</div>
+                <Title >
+                    <div>{title}</div>
+                </Title>
+                <Weight weight={weight} unitWeight={unitWeight}/>
+                <img src={image} alt=""/>
+            </div>
         </div>
     );
 };

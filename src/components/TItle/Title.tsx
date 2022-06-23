@@ -2,14 +2,14 @@ import React from "react";
 import styles from "./Title.module.scss";
 
 type TitlePropsType = {
-    children: React.ReactElement
+    title: string
 }
 
 export const Title = (props: TitlePropsType) => {
-    const {children} = props;
+    const {title} = props;
     return (
-        <>
-            {children}
-        </>
+        <div className={styles.title}>
+            {title}
+        </div>
     );
 };

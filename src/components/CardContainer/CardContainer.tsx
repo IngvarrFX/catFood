@@ -8,7 +8,7 @@ export const CardContainer = () => {
     return (
         <div className={styles.wrapper}>
             <Title>
-                <span className={styles.question}>Ты сегодня покормил кота?</span>
+                <div className={styles.question}>Ты сегодня покормил кота?</div>
             </Title>
             <div className={styles.items}>
                 {data.map((item) => {

@@ -13,9 +13,39 @@
     position: relative;
     border-radius: 8px;
     background-image: linear-gradient(135deg, transparent 28px, #fff 30px);
-    width: 310px;
-    height: 470px;
+    width: 312px;
+    height: 472px;
     overflow: hidden;
+
+    & .textWrapper {
+      margin: 15px 0 0 45px;
+      font-family: 'Trebuchet MS', serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+
+      & .tagline {
+        color: $grey;
+        font-family: 'Trebuchet MS', serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 5px;
+      }
+
+      & .taste {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 15px;
+      }
+
+      & span {
+        font-size: 14px;
+        line-height: 16px;
+        color: $grey;
+      }
+    }
 
     & img {
       display: block;
@@ -24,7 +54,25 @@
       left: -30px;
       width: 380px;
     }
+
   }
 
+  & .description {
+    position: absolute;
+    bottom: -35px;
+
+    & span {
+      color: $white;
+      font-family: 'Trebuchet MS', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 15px;
+
+      .bye {
+        color: $blue;
+      }
+    }
+  }
 
 }

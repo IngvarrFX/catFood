@@ -8,9 +8,9 @@ export const CardContainer = () => {
         <div className={styles.wrapper}>
             <div className={styles.question}>Ты сегодня покормил кота?</div>
             <div className={styles.items}>
-                {data.map((item) => {
+                {data.map((item, index) => {
                     return <div className={styles.card}>
-                        <Card key={item.id} item={item}/>
+                        <Card key={index} item={item}/>
                     </div>
                 })}
             </div>

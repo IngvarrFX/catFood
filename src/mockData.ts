@@ -17,6 +17,7 @@ export const data: Array<DataType> = [
         description: "Печень утки разварная с артишоками.",
         image: cat,
         isSelected: false,
+        inStock: true,
     },
     {
         id: "2",
@@ -34,6 +35,7 @@ export const data: Array<DataType> = [
         description: "Головы щучьи с чесноком да свежайшая сёмгушка.",
         image: cat,
         isSelected: false,
+        inStock: true,
     },
     {
         id: "3",
@@ -50,6 +52,7 @@ export const data: Array<DataType> = [
         description: "Печалька, с курой закончился.",
         image: cat,
         isSelected: false,
+        inStock: false,
     },
 ]
 
@@ -66,6 +69,7 @@ export type DataType = {
     description: string
     image: string
     isSelected: boolean
+    inStock: boolean
 }
 
 export type PromotionType = {

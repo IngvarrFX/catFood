@@ -13,6 +13,7 @@ export const data: Array<DataType> = [
         unitWeight: "кг",
         description: "Печень утки разварная с артишоками.",
         image: cat,
+        isSelected: false,
     },
     {
         id: "2",
@@ -26,6 +27,7 @@ export const data: Array<DataType> = [
         unitWeight: "кг",
         description: "Головы щучьи с чесноком да свежайшая сёмгушка.",
         image: cat,
+        isSelected: false,
     },
     {
         id: "3",
@@ -39,6 +41,7 @@ export const data: Array<DataType> = [
         unitWeight: "кг",
         description: "Печалька, с курой закончился.",
         image: cat,
+        isSelected: false,
     },
 ]
 
@@ -54,4 +57,5 @@ export type DataType = {
     unitWeight: string
     description: string
     image: string
+    isSelected: boolean
 }

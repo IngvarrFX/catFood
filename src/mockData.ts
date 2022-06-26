@@ -49,7 +49,7 @@ export const data: Array<DataType> = [
         },
         weight: "5",
         unitWeight: "кг",
-        description: "Печалька, с курой закончился.",
+        description: "Филе из цыплят с трюфелями в бульоне.",
         image: cat,
         isSelected: false,
         inStock: false,

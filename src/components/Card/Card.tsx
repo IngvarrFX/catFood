@@ -55,6 +55,7 @@ export const Card = (props: CardPropsType) => {
                     weight={weight}
                     unitWeight={unitWeight}
                     isStock={inStock}
+                    isSelected={isSelected}
                 />
                 <img src={image} alt=""/>
             </div>

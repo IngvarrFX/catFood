@@ -5,13 +5,14 @@ type WeightPropsType = {
     weight: string
     unitWeight: string
     isStock: boolean
+    isSelected: boolean
 }
 
 export const Weight = (props: WeightPropsType) => {
 
-    const {weight, unitWeight, isStock} = props;
+    const {weight, unitWeight, isStock, isSelected} = props;
 
-    const style = isStock ? styles.wrapper : styles.wrapper + " " + styles.dark;
+    const style = isSelected ? styles.wrapper + " " + styles.selected : !isStock ? styles.wrapper + " " + styles.dark : styles.wrapper;
 
     return (
         <div className={style}>

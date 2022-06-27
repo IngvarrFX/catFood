@@ -3,11 +3,11 @@ import styles from "./Card.module.scss";
 import {DataType} from "../../mockData";
 import {Weight} from "../Weight";
 import {Title} from "../TItle";
-import {Button} from "../Button";
 import {Promotion} from "../Promotion";
 
 type CardPropsType = {
     item: DataType
+    callback: (itemId: string, isSelected: boolean) => void
 }
 
 export const Card = (props: CardPropsType) => {
@@ -20,20 +20,26 @@ export const Card = (props: CardPropsType) => {
         promotion,
         weight,
         unitWeight,
-        description,
         measureQuantity,
         measure,
         image,
         isSelected,
+        inStock,
+        description,
     } = props.item;
 
-    const onClickHandle = () => {
-        console.log(id)
+    let cardWrapper = isSelected ? styles.wrapper + " " + styles.select : styles.wrapper;
+
+    const onClickSelect = () => {
+        if (inStock) {
+            props.callback(id, !isSelected)
+        }
     }
-    console.log(measure)
+
+    console.log(isSelected)
 
     return (
-        <div className={styles.wrapper}>
+        <div className={cardWrapper} onClick={onClickSelect}>
             <div className={styles.cardBlock}>
                 <div className={styles.textWrapper}>
                     <div className={styles.tagline}>{tagline}</div>
@@ -50,15 +56,18 @@ export const Card = (props: CardPropsType) => {
                 <Weight
                     weight={weight}
                     unitWeight={unitWeight}
+                    isStock={inStock}
                 />
                 <img src={image} alt=""/>
             </div>
             <div className={styles.description}>
                 {
-                    isSelected
-                        ? <span>{description}</span>
-                        : <span>Чего сидишь? Порадуй котэ,<Button callback={onClickHandle}><span
-                            className={styles.bye}>купи.</span></Button></span>
+                    inStock
+                        ? isSelected
+                            ? <span>{description}</span>
+                            : <span>Чего сидишь? Порадуй котэ,<span className={styles.bye}
+                                                                    onClick={onClickSelect}>купи.</span></span>
+                        : <span className={!inStock ? styles.end : ""}>{`Печалька, ${withWhatFeed} закончился.`}</span>
                 }
             </div>
         </div>

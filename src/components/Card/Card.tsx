@@ -28,15 +28,13 @@ export const Card = (props: CardPropsType) => {
         description,
     } = props.item;
 
-    let cardWrapper = isSelected ? styles.wrapper + " " + styles.select : styles.wrapper;
+    const cardWrapper = !inStock ? styles.wrapper + " " + styles.outStock : isSelected ? styles.wrapper + " " + styles.select : styles.wrapper;
 
     const onClickSelect = () => {
         if (inStock) {
             props.callback(id, !isSelected)
         }
     }
-
-    console.log(isSelected)
 
     return (
         <div className={cardWrapper} onClick={onClickSelect}>

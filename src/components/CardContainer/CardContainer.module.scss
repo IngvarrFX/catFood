@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20px;
 
   .items {
     display: flex;
@@ -28,3 +29,33 @@
   }
 
 }
+
+@media (max-width: $desktop-width) {
+  .wrapper {
+    .items {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .wrapper {
+    .items{
+      display: flex;
+      justify-content: center;
+      .card {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+//@media (max-width: $mobile-width) {
+//  .wrapper {
+//    .items{
+//      .card {
+//        margin-right: 0;
+//      }
+//    }
+//  }
+//}
